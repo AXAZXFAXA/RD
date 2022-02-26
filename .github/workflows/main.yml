@@ -20,8 +20,8 @@ jobs:
         Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
    
-    - name: Enable TS
-      run: Set-LocalUser -Name "ADMIN" -Password (ConvertTo-SecureString -AsPlainText "ADMIN2233" -Force)
+    - name: Set User
+      run: Set-LocalUser -Name "ADMIN2233" -Password (ConvertTo-SecureString -AsPlainText "ADMIN2233" -Force)
 
     - name: Connect to your RDP
       run: cmd /c inst.exe
