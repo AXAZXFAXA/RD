@@ -1,6 +1,6 @@
 name: 886
 
-
+on: RD
 
 jobs:
   build:
