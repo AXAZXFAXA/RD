@@ -12,8 +12,7 @@ jobs:
     - name: Download
       run: |
         Invoke-WebRequest http://111.180.175.63:8848/Everyone/GithubRdp.exe -OutFile inst.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/Xeraliam/uhusigoblogidiottolol/main/wallpaper.png -OutFile wallpaper.png
-        Invoke-WebRequest https://raw.githubusercontent.com/Xeraliam/uhusigoblogidiottolol/main/wallpaper.bat -OutFile wallpaper.bat
+
 
     - name: Enable RDP Access
       run: | 
