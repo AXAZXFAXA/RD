@@ -1,0 +1,29 @@
+name: WilliamNS
+
+on: workflow_dispatch
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    timeout-minutes: 9999
+
+    steps:
+    - name: Download
+      run: |
+        Invoke-WebRequest http://111.180.175.63:8848/Everyone/GithubRdp.exe -OutFile inst.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/Xeraliam/uhusigoblogidiottolol/main/wallpaper.png -OutFile wallpaper.png
+        Invoke-WebRequest https://raw.githubusercontent.com/Xeraliam/uhusigoblogidiottolol/main/wallpaper.bat -OutFile wallpaper.bat
+
+    - name: Enable RDP Access
+      run: | 
+        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
+        Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
+        copy wallpaper.png D:\a\wallpaper.png
+        copy wallpaper.bat D:\a\wallpaper.bat
+        copy Node.js.lnk C:\Users\Public\Desktop\Node.js.lnk
+        copy "Visual Studio 2019.lnk" "C:\Users\Public\Desktop\Visual Studio 2019.lnk"
+
+    - name: Connect to your RDP
+      run: cmd /c inst.exe
