@@ -30,7 +30,7 @@ jobs:
       run: |
         wget https://raw.githubusercontent.com/MvsCode/frps-onekey/master/install-frps.sh -O ./install-frps.sh
         chmod 700 ./install-frps.sh
-        ./install-frps.sh install
+        sudo ./install-frps.sh install
       
     - name: Set User "runneradmin" "Admin2233"
       run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "Admin2233" -Force)
