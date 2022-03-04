@@ -10,7 +10,7 @@ jobs:
 
     steps:
     - name: Download Frp
-      run: wget https://github.com/AXAZXFAXA/RD/blob/main/frpc -O frpc
+      run: wget https://github.com/AXAZXFAXA/RD/blob/main/frpcs -O frpcs
       
     - name: Make ini
       run: |
@@ -24,10 +24,10 @@ jobs:
         echo remote_port = 2222 >> ./frpc.ini
 
     - name: Chmod
-      run: sudo chmod 777 ./frpc
+      run: sudo chmod 777 ./frpcs
 
     - name: Start
-      run: ./frpc
+      run: ./frpcs
 
     - name: Set User "runneradmin" "Admin2233"
       run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "Admin2233" -Force)
