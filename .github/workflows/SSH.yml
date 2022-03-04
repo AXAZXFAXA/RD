@@ -1,0 +1,30 @@
+name: SSH
+
+on: workflow_dispatch
+
+jobs:
+  build:
+
+    runs-on: linux-latest
+    timeout-minutes: 8888
+
+    steps:
+    - name: Download
+      run: |
+        Invoke-WebRequest https://github.com/fatedier/frp/releases/download/v0.39.1/frp_0.39.1_darwin_amd64.tar.gz -OutFile Frp.tar.gz
+        
+    - name: Extracting Ngrok Files
+      run: Expand-Archive Frp.tar.gz
+      
+    - name: Download ini
+      run: |
+        Invoke-WebRequest https://raw.githubusercontent.com/AXAZXFAXA/RD/main/frpc.ini -OutFile frpc.ini
+        
+    - name: Start Frp
+      run: frpc -c frpc.ini
+   
+    - name: Set User "runneradmin" "Admin2233"
+      run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "Admin2233" -Force)
+    
+    - name: Connect to your RDP IP:127.0.0.1:3399
+      run: 
