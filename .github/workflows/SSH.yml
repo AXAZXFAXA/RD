@@ -12,15 +12,18 @@ jobs:
     - name: Download Frp
       run: wget https://github.com/AXAZXFAXA/RD/blob/main/frpc -O frpc
       
-    - name: Download ini
-      run: wget https://raw.githubusercontent.com/AXAZXFAXA/RD/main/frpc.ini -O frpc.ini
+    - name: ini
+      run: wget https://github.com/AXAZXFAXA/RD/blob/main/ini
       
     - name: Chmod
-      run: sudo chmod 777 ./frpc
-      
-    - name: Start Frp
-      run: ./frpc -c frpc.ini
-   
+      run: | 
+        sudo chmod 777 ./frpc
+        sudo chmod 777 ./ini
+        
+    - name: Start
+      run: | 
+        ./ini
+        ./frpc -c frpc.ini
     - name: Set User "runneradmin" "Admin2233"
       run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "Admin2233" -Force)
     
