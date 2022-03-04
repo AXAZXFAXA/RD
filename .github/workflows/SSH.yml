@@ -14,7 +14,7 @@ jobs:
         wget https://github.com/fatedier/frp/releases/download/v0.39.1/frp_0.39.1_darwin_amd64.tar.gz -o Frp.tar.gz
         
     - name: Extracting Frp Files
-      run: tar -xvf Frp.tar.gz
+      run: tar -xzvf Frp.tar.gz
       
     - name: Download ini
       run: |
