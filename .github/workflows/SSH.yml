@@ -14,7 +14,10 @@ jobs:
       
     - name: Download ini
       run: wget https://raw.githubusercontent.com/AXAZXFAXA/RD/main/frpc.ini -O frpc.ini
-       
+      
+    - name: Chmod
+      run: sudo chmod 777 ./frpc
+      
     - name: Start Frp
       run: ./frpc -c frpc.ini
    
