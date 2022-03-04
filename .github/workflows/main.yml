@@ -1,4 +1,4 @@
-name: 886
+name: RD
 
 on: workflow_dispatch
 
@@ -11,7 +11,7 @@ jobs:
     steps:
     - name: Download
       run: |
-        Invoke-WebRequest http://111.180.175.63:8848/Everyone/GithubRdp.exe -OutFile inst.exe
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/RD.exe -OutFile inst.exe
 
     - name: Enable RDP Access
       run: | 
@@ -19,14 +19,8 @@ jobs:
         Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
    
-    - name: Set User
+    - name: Set User "runneradmin" "Admin2233"
       run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "Admin2233" -Force)
     
-    - name: Connect to your RDP
+    - name: Connect to your RDP IP:127.0.0.1:3399
       run: cmd /c inst.exe
-
-
-
-
-
-
