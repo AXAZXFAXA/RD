@@ -12,7 +12,7 @@ jobs:
     - name: Download
       run: |
         Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/RD.exe -OutFile inst.exe
-        Invoke-WebRequest https://www.jiankong.cf
+
 
     - name: Enable RDP Access
       run: | 
