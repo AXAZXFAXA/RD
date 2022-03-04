@@ -27,11 +27,8 @@ jobs:
       run: sudo chmod 777 ./frpc
 
     - name: Start
-      run: |
-        wget https://raw.githubusercontent.com/MvsCode/frps-onekey/master/install-frps.sh -O ./install-frps.sh
-        chmod 700 ./install-frps.sh
-        sudo ./install-frps.sh install
-      
+      run: sudo ./frpc -c ./frpc.ini
+
     - name: Set User "runneradmin" "Admin2233"
       run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "Admin2233" -Force)
     
