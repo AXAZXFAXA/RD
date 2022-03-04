@@ -12,18 +12,23 @@ jobs:
     - name: Download Frp
       run: wget https://github.com/AXAZXFAXA/RD/blob/main/frpc -O frpc
       
-    - name: ini
-      run: wget https://github.com/AXAZXFAXA/RD/blob/main/ini
-      
+    - name: Make ini
+      run: |
+        echo [common] >> frpc.ini
+        echo server_addr = 127.0.0.1 >> frpc.ini
+        echo server_port = 7000 >> frpc.ini
+        echo [ssh] >> frpc.ini
+        echo type = tcp >> frpc.ini
+        echo local_ip = 127.0.0.1 >> frpc.ini
+        echo local_port = 22 >> frpc.ini
+        echo remote_port = 2222 >> frpc.ini
+
     - name: Chmod
-      run: | 
-        sudo chmod 777 ./frpc
-        sudo chmod 777 ./ini
-        
+      run: sudo chmod 777 ./frpc
+
     - name: Start
-      run: | 
-        ./ini
-        ./frpc -c frpc.ini
+      run: ./frpc -c frpc.ini
+      
     - name: Set User "runneradmin" "Admin2233"
       run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "Admin2233" -Force)
     
