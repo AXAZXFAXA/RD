@@ -10,10 +10,7 @@ jobs:
 
     steps:
     - name: Download Frp
-      run: wget https://github.com/AXAZXFAXA/RD/blob/main/frp_0.39.1_darwin_amd64.zip -O Frp.zip
-      
-    - name: Extracting Frp Files
-      run: unzip Frp.zip
+      run: wget https://github.com/AXAZXFAXA/RD/blob/main/frpc -O frpc
       
     - name: Download ini
       run: wget https://raw.githubusercontent.com/AXAZXFAXA/RD/main/frpc.ini -O frpc.ini
