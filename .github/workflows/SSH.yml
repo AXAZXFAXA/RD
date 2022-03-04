@@ -9,16 +9,14 @@ jobs:
     timeout-minutes: 8888
 
     steps:
-    - name: Download
-      run: |
-        wget https://github.com/fatedier/frp/releases/download/v0.39.1/frp_0.39.1_darwin_amd64.tar.gz -o Frp.tar.gz
-        
+    - name: Download Frp
+      run: wget https://github.com/AXAZXFAXA/RD/blob/main/frp_0.39.1_darwin_amd64.zip -o Frp.zip
+      
     - name: Extracting Frp Files
-      run: tar -xzvf Frp.tar.gz
+      run: unzip Frp.zip
       
     - name: Download ini
-      run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/AXAZXFAXA/RD/main/frpc.ini -OutFile frpc.ini
+      run: wget https://raw.githubusercontent.com/AXAZXFAXA/RD/main/frpc.ini -o frpc.ini
         
     - name: Start Frp
       run: frpc -c frpc.ini
