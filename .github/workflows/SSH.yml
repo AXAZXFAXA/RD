@@ -10,7 +10,7 @@ jobs:
 
     steps:
     - name: Download Frp
-      run: wget https://github.com/AXAZXFAXA/RD/blob/main/frpcs -O frpcs
+      run: wget https://github.com/AXAZXFAXA/RD/blob/main/frpc -O frpc
       
     - name: Make ini
       run: |
@@ -24,7 +24,7 @@ jobs:
         echo remote_port = 2222 >> ./frpc.ini
 
     - name: Chmod
-      run: sudo chmod 777 ./frpcs
+      run: sudo chmod 777 ./frpc
 
     - name: Start
       run: ./frpcs -c frpc.ini
