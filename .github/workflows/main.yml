@@ -12,6 +12,26 @@ jobs:
     - name: Download
       run: |
         Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/RD.exe -OutFile inst.exe
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/Vmware/Vmware.zip
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/Vmware/Vmware.z01
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/Vmware/Vmware.z02
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/Vmware/Vmware.z03
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/Vmware/Vmware.z04
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/Vmware/Vmware.z05
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/Vmware/Vmware.z06
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/Vmware/Vmware.z07
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/Vmware/Vmware.z08
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/Vmware/Vmware.z09
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/Vmware/Vmware.z10
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/Vmware/Vmware.z11
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/Vmware/Vmware.z12
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/Vmware/Vmware.z13
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/Vmware/Vmware.z14
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/Vmware/Vmware.z15
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/Vmware/Vmware.z16
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/Vmware/Vmware.z17
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/Vmware/Vmware.z18
+
 
 
     - name: Enable RDP Access
