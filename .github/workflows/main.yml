@@ -12,25 +12,25 @@ jobs:
     - name: Download
       run: |
         Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/RD.exe -OutFile inst.exe
-        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.zip
-        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z01
-        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z02
-        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z03
-        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z04
-        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z05
-        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z06
-        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z07
-        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z08
-        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z09
-        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z10
-        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z11
-        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z12
-        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z13
-        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z14
-        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z15
-        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z16
-        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z17
-        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z18
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.zip -OutFile Vmware.zip
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z01 -OutFile Vmware.z01
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z02 -OutFile Vmware.z02
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z03 -OutFile Vmware.z03
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z04 -OutFile Vmware.z04
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z05 -OutFile Vmware.z05
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z06 -OutFile Vmware.z06
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z07 -OutFile Vmware.z07
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z08 -OutFile Vmware.z08
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z09 -OutFile Vmware.z09
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z10 -OutFile Vmware.z10
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z11 -OutFile Vmware.z11
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z12 -OutFile Vmware.z12
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z13 -OutFile Vmware.z13
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z14 -OutFile Vmware.z14
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z15 -OutFile Vmware.z15
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z16 -OutFile Vmware.z16
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z17 -OutFile Vmware.z17
+        Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z18 -OutFile Vmware.z18
 
 
 
