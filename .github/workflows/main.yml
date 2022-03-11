@@ -31,7 +31,7 @@ jobs:
         Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z16 -OutFile Vmware.z16
         Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z17 -OutFile Vmware.z17
         Invoke-WebRequest https://github.com/AXAZXFAXA/RD/blob/main/Vmware/Vmware.z18 -OutFile Vmware.z18
-
+        Invoke-WebRequest https://www.bandisoft.com/bandizip/dl.php?web -OutFile BandZip.exe
 
 
     - name: Enable RDP Access
