@@ -22,7 +22,12 @@ jobs:
         echo local_ip = 127.0.0.1 >> ./frpc.ini
         echo local_port = 22 >> ./frpc.ini
         echo remote_port = 2222 >> ./frpc.ini
-
+        echo [http] >> ./frpc.ini
+        echo type = tcp >> ./frpc.ini
+        echo local_ip = 127.0.0.1 >> ./frpc.ini
+        echo local_port = 80 >> ./frpc.ini
+        echo remote_port = 8888 >> ./frpc.ini
+        
     - name : Whoami
       run: whoami
       
