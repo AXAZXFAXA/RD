@@ -30,7 +30,7 @@ jobs:
       run: sudo chmod 777 ./frpc
 
     - name: Clean Passwd
-      run: passwd -d runner
+      run: sudo passwd -d runner
 
     - name: Start
       run: ./frpc -c frpc.ini
