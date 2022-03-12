@@ -26,9 +26,9 @@ jobs:
     - name: Chmod
       run: sudo chmod 777 ./frpc
 
-    - name: Set User "runneradmin" "Admin2233"
-      run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "Admin2233" -Force)
-      
+    - name: Set Passwd
+      run: echo “123456″ | passwd –stdin root
+
     - name: Start
       run: ./frpc -c frpc.ini
 
