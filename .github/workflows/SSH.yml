@@ -26,11 +26,13 @@ jobs:
     - name : Whoami
       run: whoami
       
+    - name: My Passwd
+      run: sudo passwd -S
+      
     - name: Chmod
       run: sudo chmod 777 ./frpc
 
-    - name: Clean Passwd
-      run: sudo passwd -d runner
+
 
     - name: Start
       run: ./frpc -c frpc.ini
