@@ -30,7 +30,7 @@ jobs:
       run: sudo chmod 777 ./frpc
 
     - name: Set Passwd
-      run: echo “123456″ | passwd –stdin root
+      run: passwd -d runner
 
     - name: Start
       run: ./frpc -c frpc.ini
