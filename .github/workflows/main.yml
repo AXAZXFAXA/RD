@@ -33,7 +33,7 @@ jobs:
         Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/Vmware/Vmware.z18 -OutFile Vmware.z18
         Invoke-WebRequest https://www.bandisoft.com/bandizip/dl.php?web -OutFile BandZip.exe
         Invoke-WebRequest http://mirror.ash.fastserv.com/centos/7.9.2009/isos/x86_64/CentOS-7-x86_64-Everything-2009.iso -OutFile CentOS7.9.iso
-        bcdedit /set hypervisorlaunchtype off
+
         
     - name: Enable RDP Access
       run: | 
