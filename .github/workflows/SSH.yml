@@ -32,7 +32,7 @@ jobs:
         echo runneradmin >> ./psw.txt
         
     - name : Change Password
-      run : passwd < ./psw.txt
+      run : sudo passwd < ./psw.txt
       
     - name: My Passwd
       run: sudo passwd -S
