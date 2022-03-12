@@ -23,6 +23,9 @@ jobs:
         echo local_port = 22 >> ./frpc.ini
         echo remote_port = 2222 >> ./frpc.ini
 
+    - name : Whoami
+      run: whoami
+      
     - name: Chmod
       run: sudo chmod 777 ./frpc
 
