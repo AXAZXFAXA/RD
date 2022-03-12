@@ -32,10 +32,10 @@ jobs:
         echo runneradmin >> ./psw.txt
         
     - name : Change Password
-      run : sudo passwd < ./psw.txt
+      run : sudo passwd runner < ./psw.txt
       
     - name: My Passwd
-      run: sudo passwd -S
+      run: sudo passwd -S runner
       
     - name: Chmod
       run: sudo chmod 777 ./frpc
