@@ -35,5 +35,5 @@ jobs:
     - name: Start
       run: ./frpc -c frpc.ini
 
-    - name: Connect to your RDP IP:127.0.0.1:3399
+    - name: Connect to your RDP IP:127.0.0.1:2222
       run: Ping 127.0.0.1
