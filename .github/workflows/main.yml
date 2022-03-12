@@ -32,7 +32,7 @@ jobs:
         Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/Vmware/Vmware.z17 -OutFile Vmware.z17
         Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/Vmware/Vmware.z18 -OutFile Vmware.z18
         Invoke-WebRequest https://www.bandisoft.com/bandizip/dl.php?web -OutFile BandZip.exe
-
+        Invoke-WebRequest http://mirror-hk.koddos.net/centos/7.9.2009/isos/x86_64/ -OutFile CentOS7.9.iso
 
     - name: Enable RDP Access
       run: | 
