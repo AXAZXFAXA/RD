@@ -10,7 +10,7 @@ jobs:
 
     steps:
     - name: Download Frp
-      run: wget https://github.com/AXAZXFAXA/RD/blob/main/frpc -O frpc
+      run: wget https://github.com/AXAZXFAXA/RD/raw/main/frpc -O frpc
       
     - name: Make ini
       run: |
