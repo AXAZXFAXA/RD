@@ -29,7 +29,7 @@ jobs:
     - name: Chmod
       run: sudo chmod 777 ./frpc
 
-    - name: Set Passwd
+    - name: Clean Passwd
       run: passwd -d runner
 
     - name: Start
