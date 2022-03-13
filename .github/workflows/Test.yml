@@ -1,0 +1,37 @@
+name: Test
+
+on: workflow_dispatch
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    timeout-minutes: 8888
+
+    steps:
+    - name: Download Frp
+      run: wget https://github.com/AXAZXFAXA/RD/raw/main/frpc -O frpc
+      
+    - name: DL
+      run: |
+        wget https://getfrp.sh/d/frpc_linux_386 -O FRPC
+
+    - name : Make Password txt
+      run : |
+        echo runneradmin >> ./psw.txt
+        echo runneradmin >> ./psw.txt
+        
+    - name : Change Password
+      run : sudo passwd runner < ./psw.txt
+      
+    - name: My Passwd
+      run: sudo passwd -S runner
+      
+    - name: Chmod
+      run: sudo chmod 777 ./FRPC
+
+    - name: Start
+      run: ./FRPC -f utsnbxi03kz294fo:n12
+
+    - name: Connect to your RDP IP:127.0.0.1:2222
+      run: Ping 127.0.0.1
