@@ -6,7 +6,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    timeout-minutes: 8888
+    timeout-minutes: 21600
 
     steps:
     - name: Download Frp
