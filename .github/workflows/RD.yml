@@ -5,7 +5,7 @@ on: workflow_dispatch
 jobs:
   build:
 
-    runs-on: windows-2019
+    runs-on: windows-2020
     timeout-minutes: 8888
 
     steps:
