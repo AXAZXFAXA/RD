@@ -15,23 +15,23 @@ jobs:
     - name: Make ini
       run: |
         echo [common] >> ./frpc.ini
-        echo server_addr = 121.62.70.33 >> ./frpc.ini
-        echo server_port = 7000 >> ./frpc.ini
+        echo server_addr = 121.62.70.33 >> frpc.ini
+        echo server_port = 7000 >> frpc.ini
         echo [RD] >> ./frpc.ini
         echo type = tcp >> ./frpc.ini
-        echo local_ip = 127.0.0.1 >> ./frpc.ini
-        echo local_port = 3389 >> ./frpc.ini
-        echo remote_port = 3399 >> ./frpc.ini
-        echo [http80] >> ./frpc.ini
-        echo type = tcp >> ./frpc.ini
-        echo local_ip = 127.0.0.1 >> ./frpc.ini
-        echo local_port = 80 >> ./frpc.ini
-        echo remote_port = 80 >> ./frpc.ini
-        echo [http8888] >> ./frpc.ini
-        echo type = tcp >> ./frpc.ini
-        echo local_ip = 127.0.0.1 >> ./frpc.ini
-        echo local_port = 8888 >> ./frpc.ini
-        echo remote_port = 8888 >> ./frpc.ini
+        echo local_ip = 127.0.0.1 >> frpc.ini
+        echo local_port = 3389 >> frpc.ini
+        echo remote_port = 3399 >> frpc.ini
+        echo [http80] >> frpc.ini
+        echo type = tcp >> frpc.ini
+        echo local_ip = 127.0.0.1 >> frpc.ini
+        echo local_port = 80 >> frpc.ini
+        echo remote_port = 80 >> frpc.ini
+        echo [http8888] >> frpc.ini
+        echo type = tcp >> frpc.ini
+        echo local_ip = 127.0.0.1 >> frpc.ini
+        echo local_port = 8888 >> frpc.ini
+        echo remote_port = 8888 >> frpc.ini
         
     - name: Enable RDP Access
       run: | 
