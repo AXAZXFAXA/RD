@@ -4,9 +4,8 @@ on: workflow_dispatch
 
 jobs:
   build:
-
     runs-on: windows-latest
-    timeout-minutes: 8888
+    timeout-minutes: 18888
 
     steps:
     - name: Download Frp
