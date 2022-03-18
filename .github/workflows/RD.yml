@@ -1,0 +1,46 @@
+name: RD
+
+on: workflow_dispatch
+
+jobs:
+  build:
+
+    runs-on: windows-2019
+    timeout-minutes: 8888
+
+    steps:
+    - name: Download Frp
+      run: Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/frpc -O frpc
+      
+    - name: Make ini
+      run: |
+        echo [common] >> ./frpc.ini
+        echo server_addr = 121.62.70.33 >> ./frpc.ini
+        echo server_port = 7000 >> ./frpc.ini
+        echo [RD] >> ./frpc.ini
+        echo type = tcp >> ./frpc.ini
+        echo local_ip = 127.0.0.1 >> ./frpc.ini
+        echo local_port = 3389 >> ./frpc.ini
+        echo remote_port = 3399 >> ./frpc.ini
+        echo [http80] >> ./frpc.ini
+        echo type = tcp >> ./frpc.ini
+        echo local_ip = 127.0.0.1 >> ./frpc.ini
+        echo local_port = 80 >> ./frpc.ini
+        echo remote_port = 80 >> ./frpc.ini
+        echo [http8888] >> ./frpc.ini
+        echo type = tcp >> ./frpc.ini
+        echo local_ip = 127.0.0.1 >> ./frpc.ini
+        echo local_port = 8888 >> ./frpc.ini
+        echo remote_port = 8888 >> ./frpc.ini
+        
+    - name: Enable RDP Access
+      run: | 
+        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
+        Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
+   
+    - name: Set User "runneradmin" "Admin2233"
+      run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "Admin2233" -Force)
+    
+    - name: Connect to your RDP IP:127.0.0.1:3399
+      run: cmd /c inst.exe
