@@ -31,7 +31,7 @@ jobs:
       run: sudo chmod 777 ./frpc
 
     - name: Start
-      run: ./frpc -f $TOKEN
+      run: ./frpc -f ${{ secrets.TOKEN }}
 
     - name: Connect to your RDP
       run: Ping 127.0.0.1
