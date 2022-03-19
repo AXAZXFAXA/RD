@@ -1,0 +1,37 @@
+name: NatFrpSSH
+
+on: workflow_dispatch
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    timeout-minutes: 21600
+
+    steps:
+    - name: Download Frp
+      run: wget https://getfrp.sh/d/frpc_linux_386 -O frpc
+
+    - name : Make Password txt
+      run : |
+        echo runneradmin >> ./psw.txt
+        echo runneradmin >> ./psw.txt
+        
+    - name : Change Password
+      run : | 
+        sudo passwd runner < ./psw.txt
+        sudo passwd root < ./psw.txt
+      
+    - name: My Passwd
+      run : | 
+        sudo passwd -S runner
+        sudo passwd -S root
+      
+    - name: Chmod
+      run: sudo chmod 777 ./frpc
+
+    - name: Start
+      run: ./frpc -f $TOKEN
+
+    - name: Connect to your RDP
+      run: Ping 127.0.0.1
