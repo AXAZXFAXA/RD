@@ -31,7 +31,9 @@ jobs:
       run: sudo chmod 777 ./frpc
 
     - name: Start
-      run: ./frpc ${{ secrets.TOKEN }}
+      run: |
+        sudo apt install lrzsz
+        ./frpc ${{ secrets.TOKEN }}
 
     - name: Connect to your RDP
       run: Ping 127.0.0.1
