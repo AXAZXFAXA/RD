@@ -48,7 +48,9 @@ jobs:
       run: sudo chmod 777 ./frpc
 
     - name: Start
-      run: ./frpc -c frpc.ini
+      run: |
+        sudo apt install lrzsz
+        ./frpc -c frpc.ini
 
     - name: Connect to your RDP IP:127.0.0.1:2222
       run: Ping 127.0.0.1
