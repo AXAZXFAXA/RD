@@ -1,0 +1,24 @@
+name: RD
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 18888
+
+    steps:
+    - name: Download Frp
+      run: Invoke-WebRequest https://getfrp.sh/d/frpc_linux_386 -O frpc
+      
+    - name: Enable RDP Access
+      run: | 
+        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
+        Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
+   
+    - name: Set User "runneradmin" "Admin2233"
+      run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "Admin2233" -Force)
+    
+    - name: Connect to your RDP
+      run: frpc.exe ${{ secrets.TOKEN }}
