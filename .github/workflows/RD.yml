@@ -9,7 +9,7 @@ jobs:
 
     steps:
     - name: Download Frp
-      run: Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/frpc -O frpc
+      run: Invoke-WebRequest https://github.com/AXAZXFAXA/RD/raw/main/frpc.exe -O frpc
       
     - name: Make ini
       run: |
