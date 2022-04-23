@@ -22,17 +22,7 @@ jobs:
         echo local_ip = 127.0.0.1 >> frpc.ini
         echo local_port = 3389 >> frpc.ini
         echo remote_port = 3399 >> frpc.ini
-        echo [http80] >> frpc.ini
-        echo type = tcp >> frpc.ini
-        echo local_ip = 127.0.0.1 >> frpc.ini
-        echo local_port = 80 >> frpc.ini
-        echo remote_port = 80 >> frpc.ini
-        echo [http8888] >> frpc.ini
-        echo type = tcp >> frpc.ini
-        echo local_ip = 127.0.0.1 >> frpc.ini
-        echo local_port = 8888 >> frpc.ini
-        echo remote_port = 8888 >> frpc.ini
-        
+
     - name: Enable RDP Access
       run: | 
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
