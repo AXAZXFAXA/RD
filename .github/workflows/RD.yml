@@ -16,6 +16,7 @@ jobs:
         echo [common] >> frpc.ini
         echo server_addr = 111.180.149.204 >> frpc.ini
         echo server_port = 7000 >> frpc.ini
+        echo token = 123 >> frpc.ini
         echo [RD] >> frpc.ini
         echo type = tcp >> frpc.ini
         echo local_ip = 127.0.0.1 >> frpc.ini
