@@ -42,4 +42,4 @@ jobs:
       run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "Admin2233" -Force)
     
     - name: Connect to your RDP IP:127.0.0.1:3399
-      run: ./frpc.exe ${{ secrets.TOKEN }}
+      run: cmd /c frpc.exe
