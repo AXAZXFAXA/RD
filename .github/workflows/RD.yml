@@ -14,7 +14,7 @@ jobs:
     - name: Make ini
       run: |
         echo [common] >> frpc.ini
-        echo server_addr = 121.62.70.33 >> frpc.ini
+        echo server_addr = 111.180.149.204 >> frpc.ini
         echo server_port = 7000 >> frpc.ini
         echo [RD] >> frpc.ini
         echo type = tcp >> frpc.ini
