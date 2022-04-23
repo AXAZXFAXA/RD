@@ -9,7 +9,7 @@ jobs:
 
     steps:
     - name: Download Frp
-      run: Invoke-WebRequest https://getfrp.sh/d/frpc_linux_386 -O frpc
+      run: Invoke-WebRequest https://getfrp.sh/d/frpc_windows_386.exe -O frpc.exe
       
     - name: Enable RDP Access
       run: | 
