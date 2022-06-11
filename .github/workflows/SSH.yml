@@ -21,7 +21,6 @@ jobs:
         echo server_port = 7000 >> ./frpc.ini
         echo [ssh] >> ./frpc.ini
         echo type = tcp >> ./frpc.ini
-        echo local_ip = 127.0.0.1 >> ./frpc.ini
         echo local_port = 22 >> ./frpc.ini
         echo remote_port = 22 >> ./frpc.ini
 
