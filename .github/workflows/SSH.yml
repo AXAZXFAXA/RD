@@ -10,7 +10,9 @@ jobs:
 
     steps:
     - name: Download Frp
-      run: wget https://github.com/AXAZXFAXA/RD/raw/main/frpc -O frpc
+      run: |
+        wget https://github.com/fatedier/frp/releases/download/v0.43.0/frp_0.43.0_linux_386.tar.gz -O tar
+        tar -zxvf frp_0.43.0_linux_386.tar.gz
       
     - name: Make ini
       run: |
@@ -40,6 +42,7 @@ jobs:
     - name: Start
       run: |
         sudo apt install lrzsz
+        cd frp_0.43.0_linux_386
         ./frpc -c frpc.ini
 
     - name: Connect to your SSH IP:127.0.0.1:22
