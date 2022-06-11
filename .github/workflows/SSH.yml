@@ -11,7 +11,7 @@ jobs:
     steps:
     - name: Download Frp
       run: |
-        wget https://github.com/fatedier/frp/releases/download/v0.43.0/frp_0.43.0_linux_386.tar.gz -O tar
+        wget https://github.com/fatedier/frp/releases/download/v0.43.0/frp_0.43.0_linux_386.tar.gz
         tar -zxvf frp_0.43.0_linux_386.tar.gz
       
     - name: Make ini
