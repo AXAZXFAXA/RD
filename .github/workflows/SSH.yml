@@ -15,23 +15,13 @@ jobs:
     - name: Make ini
       run: |
         echo [common] >> ./frpc.ini
-        echo server_addr = 121.62.70.33 >> ./frpc.ini
+        echo server_addr = 27.28.224.150 >> ./frpc.ini
         echo server_port = 7000 >> ./frpc.ini
         echo [ssh] >> ./frpc.ini
         echo type = tcp >> ./frpc.ini
         echo local_ip = 127.0.0.1 >> ./frpc.ini
         echo local_port = 22 >> ./frpc.ini
-        echo remote_port = 2222 >> ./frpc.ini
-        echo [http80] >> ./frpc.ini
-        echo type = tcp >> ./frpc.ini
-        echo local_ip = 127.0.0.1 >> ./frpc.ini
-        echo local_port = 80 >> ./frpc.ini
-        echo remote_port = 80 >> ./frpc.ini
-        echo [http8888] >> ./frpc.ini
-        echo type = tcp >> ./frpc.ini
-        echo local_ip = 127.0.0.1 >> ./frpc.ini
-        echo local_port = 8888 >> ./frpc.ini
-        echo remote_port = 8888 >> ./frpc.ini
+        echo remote_port = 22 >> ./frpc.ini
 
     - name : Make Password txt
       run : |
@@ -52,5 +42,5 @@ jobs:
         sudo apt install lrzsz
         ./frpc -c frpc.ini
 
-    - name: Connect to your RDP IP:127.0.0.1:2222
+    - name: Connect to your SSH IP:127.0.0.1:22
       run: Ping 127.0.0.1
